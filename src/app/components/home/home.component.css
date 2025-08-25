@@ -1,0 +1,26 @@
+.app-container {
+  height: 100vh;
+}
+
+.app-sidenav {
+  width: 250px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.menu-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.menu-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content {
+  padding: 20px;
+}

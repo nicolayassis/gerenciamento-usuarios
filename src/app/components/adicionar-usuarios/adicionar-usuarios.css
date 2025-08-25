@@ -1,0 +1,10 @@
+.usuario-card {
+  max-width: 600px;
+  margin: 0 auto; /* centraliza na tela */
+  padding: 20px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 16px;
+}

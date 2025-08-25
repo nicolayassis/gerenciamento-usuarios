@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    {
+      "nome": "nicolay",
+      "email": "nicolino@email.com",
+      "idade": 199,
+      "id": "fc34"
+    },
+    {
+      "nome": "amor da vida do TI",
+      "email": "ale@gmail.com",
+      "idade": 24,
+      "id": "bcba"
+    },
+    {
+      "id": "193a",
+      "nome": "daniel",
+      "email": "daniel@hotm.com",
+      "idade": 18
+    },
+    {
+      "id": "41d0",
+      "nome": "casturina gonçalves",
+      "email": "cascas@hotmail.com",
+      "idade": 98
+    },
+    {
+      "id": "28e1",
+      "nome": "indio do brasil napolitano",
+      "email": "tupi@guarani.com",
+      "idade": 65
+    },
+    {
+      "id": "b538",
+      "nome": "senhorinha barreto ",
+      "email": "senhorinha55@gmail.com",
+      "idade": 87
+    }
+  ]
+}
