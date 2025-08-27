@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/gerenciamento-usuarios/browser",
             "browser": "src/main.ts",
             "index": "src/index.html",
             "polyfills": [
