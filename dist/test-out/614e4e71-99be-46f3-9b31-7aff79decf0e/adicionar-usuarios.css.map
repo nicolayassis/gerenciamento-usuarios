@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/adicionar-usuarios/adicionar-usuarios.css"],
-  "sourcesContent": [".usuario-card {\r\n  max-width: 600px;\r\n  margin: 0 auto; /* centraliza na tela */\r\n  padding: 20px;\r\n}\r\n\r\n.titulo {\r\n  text-align: center;\r\n  margin-bottom: 16px;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAC;AACC,aAAW;AACX,UAAQ,EAAE;AACV,WAAS;AACX;AAEA,CAAC;AACC,cAAY;AACZ,iBAAe;AACjB;",
-  "names": []
-}

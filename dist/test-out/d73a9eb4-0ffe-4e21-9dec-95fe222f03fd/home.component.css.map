@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/home/home.component.css"],
-  "sourcesContent": [".main-nav {\r\n  width: 100%;\r\n}\r\n\r\n.spacer {\r\n  flex: 1 1 auto;\r\n  /* empurra os bot\u00F5es para a direita */\r\n}\r\n\r\n.menu-image {\r\n  margin: 20px 0;\r\n  text-align: center;\r\n}\r\n\r\n.menu-image img {\r\n  max-width: 80%;\r\n  /* ajusta o tamanho da imagem */\r\n  height: auto;\r\n  border-radius: 10px;\r\n  /* opcional: bordas arredondadas */\r\n  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);\r\n  /* sombra leve */\r\n}\r\n\r\n.content {\r\n  padding: 20px;\r\n}"],
-  "mappings": ";AAAA,CAAC;AACC,SAAO;AACT;AAEA,CAAC;AACC,QAAM,EAAE,EAAE;AAEZ;AAEA,CAAC;AACC,UAAQ,KAAK;AACb,cAAY;AACd;AAEA,CALC,WAKW;AACV,aAAW;AAEX,UAAQ;AACR,iBAAe;AAEf,cAAY,IAAI,IAAI,KAAK,KAAK,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE;AAEzC;AAEA,CAAC;AACC,WAAS;AACX;",
-  "names": []
-}
