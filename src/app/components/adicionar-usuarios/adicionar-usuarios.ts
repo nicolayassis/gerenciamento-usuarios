@@ -35,7 +35,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 })
 export class AdicionarUsuariosComponent implements OnInit {
   // URL base da API (json-server neste caso)
-  private readonly API = "https://json-server-pkle.onrender.com";
+  private readonly API = "https://json-server-pkle.onrender.com/usuarios";
 
   // Injeções de dependências via `inject` (recurso Angular 14+)
   private fb = inject(FormBuilder);         // Criação e validação de formulários reativos
