@@ -2,7 +2,8 @@
 <mat-card class="usuario-card">
   <h2 class="titulo">{{ idEdicao ? 'Editar Usuário' : 'Adicionar Usuário' }}</h2>
   <div style="margin-bottom: 16px; text-align: center">
-    <button mat-raised-button color="primary" (click)="menuInicial()">
+    <button mat-raised-button color="primary" (click)="menuInicial()" matTooltip="Voltar para o menu principal"
+      matTooltipPosition="below" matTooltipShowDelay="400">
       <mat-icon>home</mat-icon> Menu Inicial
     </button>
   </div>
@@ -56,10 +57,12 @@
 
       <!-- Botões de gerenciamento -->
       <div class="botoes" style="display: flex; gap: 12px; margin-top: 12px;">
-        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid"
+          matTooltip="Salvar o cadastro/edição" matTooltipPosition="below" matTooltipShowDelay="400">
           <mat-icon>save</mat-icon> Salvar
         </button>
-        <button mat-raised-button color="warn" type="button" (click)="router.navigate(['/usuarios'])">
+        <button mat-raised-button color="warn" type="button" (click)="router.navigate(['/usuarios'])"
+          matTooltip="Cancelar e voltar" matTooltipPosition="below" matTooltipShowDelay="400">
           <mat-icon>cancel</mat-icon> Cancelar
         </button>
       </div>

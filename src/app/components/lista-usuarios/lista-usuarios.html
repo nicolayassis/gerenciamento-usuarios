@@ -1,62 +1,69 @@
 <!-- Estrutura principal do Card-->
 <mat-card class="usuario-card">
   <div class="search-container" style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px;">
-    <button mat-raised-button color="primary" (click)="menuInicial()">Menu Inicial</button>
-    <button mat-raised-button color="accent" (click)="adicionarUsuario()">Adicionar Usuário</button>
-    <button mat-raised-button color="warn" (click)="exportarPDF()">
+    <button mat-raised-button color="primary" matTooltip="Voltar ao menu inicial" matTooltipPosition="below"
+      matTooltipShowDelay="400" (click)="menuInicial()">Menu Inicial
+
+    </button>
+    <button mat-raised-button color="accent" (click)="adicionarUsuario()" matTooltip="Adicionar Usuário"
+      matTooltipPosition="below" matTooltipShowDelay="400">Adicionar Usuário</button>
+    <button mat-raised-button color="warn" (click)="exportarPDF()" matTooltip="Exportar PDF" matTooltipPosition="below"
+      matTooltipShowDelay="400">
       <mat-icon>picture_as_pdf</mat-icon> Exportar PDF
     </button>
   </div>
-    <mat-form-field appearance="outline" style="flex: 1;">
-      <mat-label>Buscar por nome ou e-mail</mat-label>
-      <input matInput placeholder="Digite aqui..." [value]="filtro()" (input)="filtro.set($any($event.target).value)">
-      <mat-icon matSuffix>search</mat-icon>
-    </mat-form-field>
-  
+  <mat-form-field appearance="outline" style="flex: 1;">
+    <mat-label>Buscar por nome ou e-mail</mat-label>
+    <input matInput placeholder="Digite aqui..." [value]="filtro()" (input)="filtro.set($any($event.target).value)">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
 
-<table mat-table [dataSource]="usuariosFiltrados()" class="mat-elevation-z8" style="width: 50%;">
 
-  <!-- Campo do nome -->
-  <ng-container matColumnDef="nome">
-    <th mat-header-cell *matHeaderCellDef> Nome </th>
-    <td mat-cell *matCellDef="let usuario"> {{ usuario.nome }} </td>
-  </ng-container>
+  <table mat-table [dataSource]="usuariosFiltrados()" class="mat-elevation-z8" style="width: 50%;">
 
-  <!-- Campo do email -->
-  <ng-container matColumnDef="email">
-    <th mat-header-cell *matHeaderCellDef> E-mail </th>
-    <td mat-cell *matCellDef="let usuario"> {{ usuario.email }} </td>
-  </ng-container>
+    <!-- Campo do nome -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let usuario"> {{ usuario.nome }} </td>
+    </ng-container>
 
-  <!-- Campo da Idade -->
-  <ng-container matColumnDef="idade">
-    <th mat-header-cell *matHeaderCellDef> Idade </th>
-    <td mat-cell *matCellDef="let usuario"> {{ usuario.idade ?? '-' }} </td>
-  </ng-container>
+    <!-- Campo do email -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> E-mail </th>
+      <td mat-cell *matCellDef="let usuario"> {{ usuario.email }} </td>
+    </ng-container>
 
-  <!-- Ações -->
-  <ng-container matColumnDef="acoes">
-    <th mat-header-cell *matHeaderCellDef> Ações </th>
-    <td mat-cell *matCellDef="let usuario">
-      <button mat-icon-button color="primary" (click)="editarUsuario(usuario.id)">
-        <mat-icon>edit</mat-icon>
-      </button>
-      <button mat-icon-button color="warn" (click)="deletarUsuario(usuario.id)">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </td>
-  </ng-container>
+    <!-- Campo da Idade -->
+    <ng-container matColumnDef="idade">
+      <th mat-header-cell *matHeaderCellDef> Idade </th>
+      <td mat-cell *matCellDef="let usuario"> {{ usuario.idade ?? '-' }} </td>
+    </ng-container>
 
-  <!-- Cabeçalho e Linhas -->
-  <tr mat-header-row *matHeaderRowDef="['nome', 'email', 'idade', 'acoes']"></tr>
-  <tr mat-row *matRowDef="let row; columns: ['nome', 'email', 'idade', 'acoes']"></tr>
+    <!-- Ações -->
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let usuario">
+        <button mat-icon-button color="primary" (click)="editarUsuario(usuario.id)" matTooltip="Editar"
+          matTooltipPosition="below" matTooltipShowDelay="400">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deletarUsuario(usuario.id)" matTooltip="Excluir Usuário"
+          matTooltipPosition="below" matTooltipShowDelay="400">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
 
-  <!-- Linha vazia -->
-  <tr *ngIf="usuariosFiltrados().length === 0">
-    <td colspan="4" class="vazio" style="text-align: center; padding: 16px;">
-      Nenhum usuário encontrado.
-    </td>
-  </tr>
-</table>
+    <!-- Cabeçalho e Linhas -->
+    <tr mat-header-row *matHeaderRowDef="['nome', 'email', 'idade', 'acoes']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['nome', 'email', 'idade', 'acoes']"></tr>
+
+    <!-- Linha vazia -->
+    <tr *ngIf="usuariosFiltrados().length === 0">
+      <td colspan="4" class="vazio" style="text-align: center; padding: 16px;">
+        Nenhum usuário encontrado.
+      </td>
+    </tr>
+  </table>
 </mat-card>
 <router-outlet></router-outlet>

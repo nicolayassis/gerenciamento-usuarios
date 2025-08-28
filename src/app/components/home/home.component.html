@@ -24,13 +24,19 @@
       <span>Gerenciamento de Usuários</span>
       <span class="spacer"></span>
 
+      
       <!-- Menu para desktop -->
-      <ng-container *ngIf="!(isHandset$ | async)">
-        <button mat-button *ngFor="let item of itensMenu" [routerLink]="item.route">
-          <mat-icon>{{ item.icon }}</mat-icon>
-          {{ item.label }}
-        </button>
-      </ng-container>
+ <ng-container *ngIf="!(isHandset$ | async)">
+  <button mat-button 
+          *ngFor="let item of itensMenu" 
+          [routerLink]="item.route"
+          [matTooltip]="item.label" 
+          matTooltipPosition="below" 
+          matTooltipShowDelay="400">
+    <mat-icon>{{ item.icon }}</mat-icon>
+    {{ item.label }}
+  </button>
+</ng-container>
     </mat-toolbar>
 
     <!-- Imagem do menu principal -->
