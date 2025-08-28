@@ -48,7 +48,7 @@ interface Usuario {
 })
 export class ListaUsuariosComponent implements OnInit {
   // URL base da API (json-server neste caso)
-  private readonly API = 'http://localhost:3000/usuarios';
+  private readonly API = "https://json-server-api.onrender.com";
 
   // Signals (Angular 16+) para estado reativo
   usuarios = signal<Usuario[]>([]); // lista de usuários carregados da API
